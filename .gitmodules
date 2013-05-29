@@ -5,3 +5,35 @@
 [submodule "neocomplcache"]
         path = bundle/neocomplcache.vim
         url = git://github.com/Shougo/neocomplcache.vim.git
+
+[submodule "nerdtree"]
+        path = bundle/nerdtree
+        url = git://github.com/scrooloose/nerdtree.git
+
+[submodule "python-mode"]
+        path = bundle/python-mode
+        url = git://github.com/klen/python-mode.git
+
+[submodule "supertab"]
+        path = bundle/supertab
+        url = git://github.com/ervandew/supertab.git
+
+[submodule "syntastic"]
+        path = bundle/syntastic
+        url = git://github.com/scrooloose/syntastic.git
+
+[submodule "tagbar"]
+        path = bundle/tagbar
+        url = git://github.com/majutsushi/tagbar.git
+
+[submodule "ultisnips"]
+        path = bundle/ultisnips
+        url = git://github.com/SirVer/ultisnips.git
+
+[submodule "vim-commentary"]
+        path = bundle/vim-commentary
+        url = git://github.com/tpope/vim-commentary.git
+
+[submodule "vim-powerline"]
+        path = bundle/vim-powerline
+        url = git://github.com/Lokaltog/vim-powerline.git
