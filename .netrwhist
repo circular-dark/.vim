@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/heavenhuang/.config'
 let g:netrw_dirhist_2='/Users/heavenhuang/tmp'
 let g:netrw_dirhist_3='/Users/heavenhuang/.vim/plugin'
@@ -7,3 +7,4 @@ let g:netrw_dirhist_4='/Users/heavenhuang/.vim/bundle/vim-powerline'
 let g:netrw_dirhist_5='/Users/heavenhuang/Development/myPython/think_in_python'
 let g:netrw_dirhist_6='/Users/heavenhuang/.vim/bundle'
 let g:netrw_dirhist_7='/Users/heavenhuang/.vim/bundle/python-mode'
+let g:netrw_dirhist_8='/Users/heavenhuang/.vim'
