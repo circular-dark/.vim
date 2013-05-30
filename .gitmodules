@@ -33,3 +33,7 @@
 [submodule "vim-powerline"]
         path = bundle/vim-powerline
         url = git://github.com/Lokaltog/vim-powerline.git
+
+[submodule "AutoClose"]
+        path = bundle/AutoClose
+        url = git://github.com/vim-scripts/AutoClose.git
