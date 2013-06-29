@@ -48,6 +48,9 @@ noremap <F9> :NERDTreeToggle<CR>
 " Syntastic
 let g:syntastic_auto_loc_list=1
 
+" autoclose
+let g:AutoClosePairs = "() {} \" ' []"
+
 " clang_complete
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
@@ -143,3 +146,6 @@ inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 " Powerline Setting
 let g:Powerline_symbols = 'compatible'
 let g:Powerline_colorscheme = 'solarized256'
+
+" Supertab Setting
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
