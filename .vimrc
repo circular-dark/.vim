@@ -99,16 +99,22 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Settings for vim-powerline
+set laststatus=2
+
+" Powerline Setting
+let g:Powerline_symbols = 'compatible'
+let g:Powerline_colorscheme = 'solarized256'
+
+" Supertab Setting
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 " call pathogen to load plugins
 call pathogen#infect()
 
 " ============================================================================
 " Python IDE Setup
 " ============================================================================
-
-" Settings for vim-powerline
-set laststatus=2
-
 
 " Settings for ctrlp
 let g:ctrlp_max_height = 30
@@ -126,26 +132,3 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-
-" Better navigating through omnicomplete option list
-set completeopt=longest,menuone
-function! OmniPopup(action)
-    if pumvisible()
-        if a:action == 'j'
-            return "\<C-N>"
-        elseif a:action == 'k'
-            return "\<C-P>"
-        endif
-    endif
-    return a:action
-endfunction
-
-inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
-inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
-
-" Powerline Setting
-let g:Powerline_symbols = 'compatible'
-let g:Powerline_colorscheme = 'solarized256'
-
-" Supertab Setting
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
