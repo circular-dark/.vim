@@ -94,11 +94,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " autoclose
 let g:AutoClosePairs = "() {} []"
 
-" " clang_complete
-" let g:clang_snippets = 1
-" let g:clang_snippets_engine = 'ultisnips'
-" let g:clang_sort_algo = "none"
-" let g:clang_auto_select = 2
-
-" " Supertab Setting
-" let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" clang_complete
+let g:clang_snippets = 1
+let g:clang_snippets_engine = 'ultisnips'
+let g:clang_sort_algo = "none"
+let g:clang_auto_select = 2
