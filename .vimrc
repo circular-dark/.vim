@@ -14,6 +14,8 @@ noremap <Leader>q :q!<CR>
 noremap <Leader>w :w<CR>
 noremap <Leader>e :wq<CR>
 noremap <Leader>E :wqa<CR>
+noremap ( :tabprev<CR>
+noremap ) :tabnext<CR>
 
 " Move around windows
 map <c-j> <c-w>j
@@ -26,7 +28,7 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 " Tagbar
-noremap <F8> :TagbarToggle<CR>
+noremap <Leader>b :TagbarToggle<CR>
 let g:tagbar_type_c = {
     \ 'kinds' : [
         \ 'd:macros:1:0',
@@ -43,7 +45,7 @@ let g:tagbar_type_c = {
 \ }
 
 " NERDTree
-noremap <F9> :NERDTreeToggle<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 
 " Syntastic
 let g:syntastic_auto_loc_list=1
@@ -117,18 +119,21 @@ call pathogen#infect()
 " ============================================================================
 
 " Settings for ctrlp
-let g:ctrlp_max_height = 30
-set wildignore+=*.pyc
-set wildignore+=*_build/*
-set wildignore+=*/coverage/*
+autocmd Filetype python let g:ctrlp_max_height = 30
+autocmd Filetype python set wildignore+=*.pyc
+autocmd Filetype python set wildignore+=*_build/*
+autocmd Filetype python set wildignore+=*/coverage/*
 
 " Settings for python-mode
-map <Leader>g :call RopeGotoDefinition()<CR>
-let ropevim_enable_shortcuts = 1
-let g:pymode_rope_goto_def_newwin = "vnew"
-let g:pymode_rope_extended_complete = 1
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+autocmd Filetype python map <Leader>g :call RopeGotoDefinition()<CR>
+autocmd Filetype python let ropevim_enable_shortcuts = 1
+autocmd Filetype python let g:pymode_rope_goto_def_newwin = "vnew"
+autocmd Filetype python let g:pymode_rope_extended_complete = 1
+autocmd Filetype python let g:pymode_breakpoint = 0
+autocmd Filetype python let g:pymode_syntax = 1
+autocmd Filetype python let g:pymode_syntax_builtin_objs = 0
+autocmd Filetype python let g:pymode_syntax_builtin_funcs = 0
+autocmd Filetype python let g:pymode_lint_checker = "pep8"
+autocmd Filetype python map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
