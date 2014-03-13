@@ -4,6 +4,10 @@ set pastetoggle=<F2>
 " Better location of <mapleader> key
 let mapleader = ","
 
+" Show tailing whitespaces as red
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
+
 " Color scheme
 set t_Co=256
 color wombat256mod
@@ -36,10 +40,6 @@ map <c-h> <c-w>h
 vnoremap < <gv
 vnoremap > >gv
 
-" Show whitespace
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
-
 " Showing line numbers and length
 set number
 set tw=79   " width of document (used by gd)
@@ -53,11 +53,13 @@ set history=700
 set undolevels=700
 
 " Real programmers don't use TABs but spaces
-set tabstop=8
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+set autoindent
+set smarttab
 
 " Make search case insensitive
 set hlsearch
@@ -65,6 +67,7 @@ set incsearch
 set ignorecase
 set smartcase
 
+" No backup so be careful
 set nobackup
 set nowritebackup
 set noswapfile
@@ -82,26 +85,14 @@ noremap <Leader>n :NERDTreeToggle<CR>
 " Tagbar
 noremap <Leader>b :TagbarToggle<CR>
 
-" let g:tagbar_type_c = {
-"     \ 'kinds' : [
-"         \ 'd:macros:1:0',
-"         \ 'p:prototypes:1:0',
-"         \ 'g:enums',
-"         \ 'e:enumerators',
-"         \ 't:typedefs',
-"         \ 's:structs',
-"         \ 'u:unions',
-"         \ 'm:members',
-"         \ 'v:variables',
-"         \ 'f:functions',
-"     \ ],
-" \ }
+" Syntastic
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['cpp', 'c', 'sml', 'python', 'go'],
+                           \ 'passive_filetypes': [] }
 
-" " Syntastic
-" let g:syntastic_auto_loc_list=1
-
-" " autoclose
-" let g:AutoClosePairs = "() {} []"
+" autoclose
+let g:AutoClosePairs = "() {} []"
 
 " " clang_complete
 " let g:clang_snippets = 1
@@ -111,28 +102,3 @@ noremap <Leader>b :TagbarToggle<CR>
 
 " " Supertab Setting
 " let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-
-
-" ============================================================================
-" Python IDE Setup
-" ============================================================================
-
-" " Settings for ctrlp
-" autocmd Filetype python let g:ctrlp_max_height = 30
-" autocmd Filetype python set wildignore+=*.pyc
-" autocmd Filetype python set wildignore+=*_build/*
-" autocmd Filetype python set wildignore+=*/coverage/*
-
-" " Settings for python-mode
-" autocmd Filetype python map <Leader>g :call RopeGotoDefinition()<CR>
-" autocmd Filetype python let ropevim_enable_shortcuts = 1
-" autocmd Filetype python let g:pymode_rope_goto_def_newwin = "vnew"
-" autocmd Filetype python let g:pymode_rope_extended_complete = 1
-" autocmd Filetype python let g:pymode_breakpoint = 0
-" autocmd Filetype python let g:pymode_syntax = 1
-" autocmd Filetype python let g:pymode_syntax_builtin_objs = 0
-" autocmd Filetype python let g:pymode_syntax_builtin_funcs = 0
-" autocmd Filetype python let g:pymode_lint_checker = "pep8"
-" autocmd Filetype python map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
-
-" autocmd FileType go autocmd BufWritePre <buffer> Fmt

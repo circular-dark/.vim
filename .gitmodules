@@ -6,10 +6,6 @@
         path = bundle/nerdtree
         url = git://github.com/scrooloose/nerdtree.git
 
-[submodule "python-mode"]
-        path = bundle/python-mode
-        url = git://github.com/klen/python-mode.git
-
 [submodule "supertab"]
         path = bundle/supertab
         url = git://github.com/ervandew/supertab.git
@@ -37,7 +33,3 @@
 [submodule "vim-autoclose"]
         path = bundle/vim-autoclose
         url = git://github.com/Townk/vim-autoclose.git
-
-[submodule "a.vim"]
-        path = bundle/a.vim
-        url = https://github.com/vim-scripts/a.vim

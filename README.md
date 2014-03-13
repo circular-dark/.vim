@@ -30,8 +30,8 @@
 #####clang_complete + supertab
 
 	<Tab>: showing completion options
-	<c-]>: find definition
-	<c-t>: jump back from definition
+	<c-]>: find definition (in c and cpp)
+	<c-t>: jump back from definition (in c and cpp)
 
 #####vim-commentary
 
