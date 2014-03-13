@@ -79,8 +79,9 @@ let g:Powerline_colorscheme = 'solarized256'
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
 
-" " Tagbar
-" noremap <Leader>b :TagbarToggle<CR>
+" Tagbar
+noremap <Leader>b :TagbarToggle<CR>
+
 " let g:tagbar_type_c = {
 "     \ 'kinds' : [
 "         \ 'd:macros:1:0',

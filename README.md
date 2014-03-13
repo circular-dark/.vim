@@ -8,22 +8,24 @@
 
 #####.vimrc
 
-	<F2>: paste toggle, maintaining original format of pasting content
-	<F8>: toggle Tagbar
-	<F9>: toggle NERDTree
-
 	<Leader> key is ","
+
+	<F2>: paste toggle, maintaining original format of pasting content
+	<Leader>n: toggle NERDTree
+	<Leader>b: toggle Tagbar
+
 	<Leader>q: quit without saving
 	<Leader>w: save changes
 	<Leader>e: save and quit current window
-	<Leader>E: save and quit all windows
-	<Leader>is: alternate between header and source files
 
 	<c-j>: move to the window below
 	<c-k>: move to the window above
 	<c-l>: move to the right window
 	<c-h>: move to the left window
 	<c-n>: cancel highlights on findings
+
+        (: previous tab
+        ): next tab
 
 #####clang_complete + supertab
 
