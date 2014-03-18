@@ -98,4 +98,4 @@ let g:AutoClosePairs = "() {} []"
 let g:clang_snippets = 1
 let g:clang_snippets_engine = 'ultisnips'
 let g:clang_sort_algo = "none"
-let g:clang_auto_select = 2
+let g:clang_auto_select = 0
