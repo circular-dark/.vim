@@ -53,11 +53,11 @@ set history=700
 set undolevels=700
 
 " Real programmers don't use TABs but spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 set shiftround
-set expandtab
+set noexpandtab
 set autoindent
 set smarttab
 
@@ -86,18 +86,13 @@ noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>b :TagbarToggle<CR>
 
 " Syntastic
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_auto_loc_list = 2
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['cpp', 'c', 'sml', 'python', 'go'],
                            \ 'passive_filetypes': [] }
+" let g:syntastic_cpp_compiler = 'clang++'
+" let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_c_gcc_args = '-Wall -Werror -gdwarf-2 -O0 -m32 -fno-stack-protector -fno-omit-frame-pointer -Itraceback/ -mpreferred-stack-boundary=2 -static'
 
 " autoclose
 let g:AutoClosePairs = "() {} []"
-
-" clang_complete
-let g:clang_snippets = 1
-let g:clang_snippets_engine = 'ultisnips'
-let g:clang_sort_algo = "none"
-let g:clang_auto_select = 1
-let g:clang_close_preview = 1
-let g:clang_complete_auto = 1
