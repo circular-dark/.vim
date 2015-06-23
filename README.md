@@ -2,7 +2,7 @@
 
 ####Copy
 
-	git clone --recursive https://github.com/circular-dark/.vim.git
+	git clone https://github.com/circular-dark/.vim
 
 ####Settings and Commands
 
@@ -12,7 +12,6 @@
 
 	<F2>: paste toggle, maintaining original format of pasting content
 	<Leader>n: toggle NERDTree
-	<Leader>b: toggle Tagbar
 
 	<Leader>q: quit without saving
 	<Leader>w: save changes

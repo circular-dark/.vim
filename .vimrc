@@ -1,3 +1,22 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-commentary'
+Plugin 'fatih/vim-go'
+Plugin 'Shougo/neocomplete.vim'
+
+call vundle#end()
+filetype plugin indent on
+syntax on
+syntax enable
+set ruler
+
 " Paste without indent changes
 set pastetoggle=<F2>
 
@@ -11,12 +30,6 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Color scheme
 set t_Co=256
 color wombat256mod
-
-" Enable syntax highlighting
-filetype off
-call pathogen#infect()
-filetype plugin indent on
-syntax on
 
 " Bind nohl
 noremap <C-n> :nohl<CR>
@@ -53,11 +66,11 @@ set history=700
 set undolevels=700
 
 " Real programmers don't use TABs but spaces
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
-set noexpandtab
+set expandtab
 set autoindent
 set smarttab
 
@@ -82,17 +95,8 @@ let g:Powerline_colorscheme = 'solarized256'
 " NERDTree
 noremap <Leader>n :NERDTreeToggle<CR>
 
-" Tagbar
-noremap <Leader>b :TagbarToggle<CR>
+" Go-vim
+let g:go_disable_autoinstall = 0
 
-" Syntastic
-let g:syntastic_auto_loc_list = 2
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['cpp', 'c', 'sml', 'python', 'go'],
-                           \ 'passive_filetypes': [] }
-" let g:syntastic_cpp_compiler = 'clang++'
-" let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-let g:syntastic_c_gcc_args = '-Wall -Werror -gdwarf-2 -O0 -m32 -fno-stack-protector -fno-omit-frame-pointer -Itraceback/ -mpreferred-stack-boundary=2 -static'
-
-" autoclose
-let g:AutoClosePairs = "() {} []"
+" Neocomplete
+let g:neocomplete#enable_at_startup = 1
